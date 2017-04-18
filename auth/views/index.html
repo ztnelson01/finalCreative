@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>User Login and Sessions</title>
+  <link rel="stylesheet" type="text/css"
+      href="/static/css/styles.css" />
+</head>
+<body>
+  <center style="color:white">
+  <div ng-controller="myController">
+    <h2>Welcome. You are Logged In as <%= username %></h2>
+
+    <h3><a href="/logout" style="color:white">logout</a><br><br>
+    <input type="text" name="lastName" ng-model="comment">
+    <button ng-click="sendData()">submit</button>
+    <div ng-repeat="n in comments">
+      <p>{{n}}<p>
+    </div>
+  </div>
+
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/static/js/my_app.js"></script>
+</body>
+</html>
